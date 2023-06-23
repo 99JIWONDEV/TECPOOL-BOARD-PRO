@@ -15,7 +15,7 @@ const RegisterModal = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
+  // const [username, setUsername] = useState('');
   const [name, setName] = useState('');
 
   const [isLoading, setIsLoading] = useState(false);
@@ -55,7 +55,7 @@ const RegisterModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [email, password, registerModal, username, name]);
+  }, [email, password, registerModal, name]);
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
