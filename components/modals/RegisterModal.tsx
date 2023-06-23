@@ -36,13 +36,13 @@ const RegisterModal = () => {
       await axios.post('/api/register', {
         email,
         password,
-        username,
+        // username,
         name,
       });
 
       setIsLoading(false)
 
-      toast.success('Account created.');
+      toast.success('계정이 생성되었습니다');
 
       signIn('credentials', {
         email,
@@ -61,25 +61,25 @@ const RegisterModal = () => {
     <div className="flex flex-col gap-4">
       <Input
         disabled={isLoading}
-        placeholder="Email" 
+        placeholder="AJOU 이메일" 
         value={email} 
         onChange={(e) => setEmail(e.target.value)} 
       />
       <Input 
         disabled={isLoading}
-        placeholder="Name" 
+        placeholder="이름 (실명)" 
         value={name} 
         onChange={(e) => setName(e.target.value)} 
       />
-      <Input 
+      {/* <Input 
         disabled={isLoading}
         placeholder="Username" 
         value={username} 
         onChange={(e) => setUsername(e.target.value)}
-      />
+      /> */}
       <Input 
         disabled={isLoading}
-        placeholder="Password" 
+        placeholder="비밀번호" 
         type="password" 
         value={password} 
         onChange={(e) => setPassword(e.target.value)}
@@ -89,15 +89,15 @@ const RegisterModal = () => {
 
   const footerContent = (
     <div className="text-neutral-400 text-center mt-4">
-      <p>Already have an account?
+      <p>계정이 있으신가요?
         <span 
           onClick={onToggle} 
           className="
-            text-white 
+            text-white
             cursor-pointer 
             hover:underline
           "
-          > Sign in</span>
+          > 로그인하기</span>
       </p>
     </div>
   )
@@ -106,8 +106,8 @@ const RegisterModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={registerModal.isOpen}
-      title="Create an account"
-      actionLabel="Register"
+      title="회원 가입"
+      actionLabel="회원 가입"
       onClose={registerModal.onClose}
       onSubmit={onSubmit}
       body={bodyContent}

@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { FaFeather } from "react-icons/fa";
+import { TbPencilMinus } from "react-icons/tb";
 import { useRouter } from "next/router";
 
 import useLoginModal from "@/hooks/useLoginModal";
@@ -30,12 +30,12 @@ const SidebarTweetButton = () => {
         flex
         items-center
         justify-center 
-        bg-sky-500 
+        bg-black
         hover:bg-opacity-80 
         transition 
         cursor-pointer
       ">
-        <FaFeather size={24} color="white" />
+        <TbPencilMinus size={24} color="white" />
       </div>
       <div className="
         mt-6
@@ -44,7 +44,7 @@ const SidebarTweetButton = () => {
         px-4
         py-2
         rounded-full
-        bg-sky-500
+        bg-black
         hover:bg-opacity-90 
         cursor-pointer
       ">
@@ -57,7 +57,7 @@ const SidebarTweetButton = () => {
             text-white 
             text-[20px]
         ">
-          Tweet
+          TECPOOL
         </p>
       </div>
     </div>

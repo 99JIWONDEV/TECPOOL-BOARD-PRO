@@ -38,7 +38,7 @@ const EditModal = () => {
       await axios.patch('/api/edit', { name, username, bio, profileImage, coverImage });
       mutateFetchedUser();
 
-      toast.success('Updated');
+      toast.success('수정 되었습니다');
 
       editModal.onClose();
     } catch (error) {
@@ -50,22 +50,22 @@ const EditModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <ImageUpload value={profileImage} disabled={isLoading} onChange={(image) => setProfileImage(image)} label="Upload profile image" />
-      <ImageUpload value={coverImage} disabled={isLoading} onChange={(image) => setCoverImage(image)} label="Upload cover image" />
+      <ImageUpload value={profileImage} disabled={isLoading} onChange={(image) => setProfileImage(image)} label="프로필 사진을 업로드 하세요" />
+      <ImageUpload value={coverImage} disabled={isLoading} onChange={(image) => setCoverImage(image)} label="커버 사진을 업로드 하세요" />
       <Input
-        placeholder="Name"
+        placeholder="이름 (실명)"
         onChange={(e) => setName(e.target.value)}
         value={name}
         disabled={isLoading}  
       />
-      <Input 
+      {/* <Input 
         placeholder="Username"
         onChange={(e) => setUsername(e.target.value)}
         value={username}
         disabled={isLoading} 
-      />
+      /> */}
       <Input 
-        placeholder="Bio"
+        placeholder="자기소개"
         onChange={(e) => setBio(e.target.value)}
         value={bio}
         disabled={isLoading} 
@@ -77,8 +77,8 @@ const EditModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={editModal.isOpen}
-      title="Edit your profile"
-      actionLabel="Save"
+      title="프로필을 수정하세요"
+      actionLabel="저장"
       onClose={editModal.onClose}
       onSubmit={onSubmit}
       body={bodyContent}

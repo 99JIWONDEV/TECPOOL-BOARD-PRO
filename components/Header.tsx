@@ -15,12 +15,12 @@ const Header: React.FC<HeaderProps> = ({showBackArrow, label }) => {
   }, [router]);
 
   return (
-    <div className="border-b-[1px] border-neutral-800 p-5">
+    <div className="border-b-[1px] border-gray-200  p-5">
       <div className="flex flex-row items-center gap-2">
         {showBackArrow && (
           <BiArrowBack 
             onClick={handleBack} 
-            color="white" 
+            color="black" 
             size={20} 
             className="
               cursor-pointer 
@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({showBackArrow, label }) => {
               transition
           "/>
         )}
-        <h1 className="text-white text-xl font-semibold">
+        <h1 className="text-black text-2xl font-semibold">
           {label}
         </h1>
       </div>

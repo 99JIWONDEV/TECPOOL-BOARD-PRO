@@ -49,7 +49,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, auth
         cursor-pointer 
         lg:hidden
       ">
-        <Icon size={28} color="white" />
+        <Icon size={28} color="black" />
         {alert ? <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} /> : null}
       </div>
       <div className="
@@ -65,8 +65,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon: Icon, href, auth
         cursor-pointer
         items-center
       ">
-        <Icon size={24} color="white" />
-        <p className="hidden lg:block text-white text-xl">
+        <Icon size={24} color="black" />
+        <p className="hidden lg:block text-black text-xl">
           {label}
         </p>
         {alert ? <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} /> : null}

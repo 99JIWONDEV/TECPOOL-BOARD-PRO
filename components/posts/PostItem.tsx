@@ -54,10 +54,10 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
       onClick={goToPost}
       className="
         border-b-[1px] 
-        border-neutral-800 
+        // border-gray-200 
         p-5 
         cursor-pointer 
-        hover:bg-neutral-900 
+        hover:white
         transition
       ">
       <div className="flex flex-row items-start gap-3">
@@ -67,7 +67,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
             <p 
               onClick={goToUser} 
               className="
-                text-white 
+                text-black 
                 font-semibold 
                 cursor-pointer 
                 hover:underline
@@ -83,13 +83,13 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
                 hidden
                 md:block
             ">
-              @{data.user.username}
+              {/* @{data.user.username} */}
             </span>
             <span className="text-neutral-500 text-sm">
               {createdAt}
             </span>
           </div>
-          <div className="text-white mt-1">
+          <div className="text-black mt-1">
             {data.body}
           </div>
           <div className="flex flex-row items-center mt-3 gap-10">
@@ -121,9 +121,9 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
                 transition 
                 hover:text-red-500
             ">
-              <LikeIcon color={hasLiked ? 'red' : ''} size={20} />
+              {/* <LikeIcon color={hasLiked ? 'red' : ''} size={20} /> */}
               <p>
-                {data.likedIds.length}
+                {/* {data.likedIds.length} */}
               </p>
             </div>
           </div>

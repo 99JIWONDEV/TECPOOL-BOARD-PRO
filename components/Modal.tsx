@@ -86,7 +86,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, a
                   p-1 
                   ml-auto
                   border-0 
-                  text-white 
+                  text-white
                   hover:opacity-70
                   transition
                 "

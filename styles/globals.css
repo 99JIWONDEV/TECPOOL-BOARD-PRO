@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  @apply h-full bg-black
+  @apply h-full bg-white
 }
 body {
-  @apply h-full bg-black
+  @apply h-full bg-white
 }

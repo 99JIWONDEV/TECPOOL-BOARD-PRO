@@ -25,7 +25,7 @@ const LoginModal = () => {
         password,
       });
 
-      toast.success('Logged in');
+      toast.success('로그인 되었습니다');
 
       loginModal.onClose();
     } catch (error) {
@@ -43,13 +43,13 @@ const LoginModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Input 
-        placeholder="Email"
+        placeholder="AJOU 이메일"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         disabled={isLoading}  
       />
       <Input 
-        placeholder="Password"
+        placeholder="비밀번호"
         type="password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
@@ -60,7 +60,7 @@ const LoginModal = () => {
 
   const footerContent = (
     <div className="text-neutral-400 text-center mt-4">
-      <p>First time using TECPOOL?
+      <p>TECPOOL이 처음이신가요?
         <span 
           onClick={onToggle} 
           className="
@@ -68,7 +68,7 @@ const LoginModal = () => {
             cursor-pointer 
             hover:underline
           "
-          > Create an account</span>
+          > 회원 가입</span>
       </p>
     </div>
   )
@@ -77,8 +77,8 @@ const LoginModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={loginModal.isOpen}
-      title="Login"
-      actionLabel="Sign in"
+      title="로그인"
+      actionLabel="로그인"
       onClose={loginModal.onClose}
       onSubmit={onSubmit}
       body={bodyContent}
