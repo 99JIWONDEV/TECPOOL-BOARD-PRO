@@ -50,7 +50,7 @@ const UserBio: React.FC<UserBioProps> = ({ userId }) => {
             {fetchedUser?.name}
           </p>
           <p className="text-md text-neutral-500">
-            {/* @{fetchedUser?.username} */}
+            @{fetchedUser?.username}
           </p>
         </div>
         <div className="flex flex-col mt-4">

@@ -13,9 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const { name, username, bio, profileImage, coverImage } = req.body;
 
-    // if (!name || !username) {
-    //   throw new Error('Missing fields');
-    // }
+    if (!name || !username) {
+      throw new Error('Missing fields');
+    }
 
     const updatedUser = await prisma.user.update({
       where: {
@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       data: {
         name,
-        // username,
+        username,
         bio,
         profileImage,
         coverImage

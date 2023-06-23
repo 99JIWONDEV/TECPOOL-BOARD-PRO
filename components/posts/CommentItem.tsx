@@ -58,7 +58,7 @@ const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
                 hidden
                 md:block
             ">
-              {/* @{data.user.username} */}
+              @{data.user.username}
             </span>
             <span className="text-neutral-500 text-sm">
               {createdAt}
