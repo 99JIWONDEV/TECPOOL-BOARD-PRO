@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import useLoginModal from "@/hooks/useLoginModal";
 import useCurrentUser from "@/hooks/useCurrentUser";
 
-const SidebarTweetButton = () => {
+const SidebarBoardButton = () => {
   const router = useRouter();
   const loginModal = useLoginModal();
   const { data: currentUser } = useCurrentUser();
@@ -15,12 +15,13 @@ const SidebarTweetButton = () => {
       return loginModal.onOpen();
     }
 
-    router.push('/');
+    router.push("/");
   }, [loginModal, router, currentUser]);
 
   return (
     <div onClick={onClick}>
-      <div className="
+      <div
+        className="
         mt-6
         lg:hidden 
         rounded-full 
@@ -34,10 +35,12 @@ const SidebarTweetButton = () => {
         hover:bg-opacity-80 
         transition 
         cursor-pointer
-      ">
+      "
+      >
         <TbPencilMinus size={24} color="white" />
       </div>
-      <div className="
+      <div
+        className="
         mt-6
         hidden 
         lg:block 
@@ -47,8 +50,9 @@ const SidebarTweetButton = () => {
         bg-black
         hover:bg-opacity-90 
         cursor-pointer
-      ">
-        <p 
+      "
+      >
+        <p
           className="
             hidden 
             lg:block 
@@ -56,7 +60,8 @@ const SidebarTweetButton = () => {
             font-semibold
             text-white 
             text-[20px]
-        ">
+        "
+        >
           TECPOOL
         </p>
       </div>
@@ -64,4 +69,4 @@ const SidebarTweetButton = () => {
   );
 };
 
-export default SidebarTweetButton;
+export default SidebarBoardButton;

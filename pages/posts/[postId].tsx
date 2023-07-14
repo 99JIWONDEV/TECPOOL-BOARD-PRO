@@ -25,7 +25,7 @@ const PostView = () => {
 
   return ( 
     <>
-      <Header showBackArrow label="Tweet" />
+      <Header showBackArrow label="BOARD" />
       <PostItem data={fetchedPost} />
       <Form postId={postId as string} isComment placeholder="TECPOOL CHAT ID를 공유하고, 채팅해요" />
       <CommentFeed comments={fetchedPost?.comments} />

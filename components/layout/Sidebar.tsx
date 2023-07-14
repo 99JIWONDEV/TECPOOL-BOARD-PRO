@@ -7,7 +7,7 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 
 import SidebarItem from "./SidebarItem";
 import SidebarLogo from "./SidebarLogo";
-import SidebarTweetButton from "./SidebarTweetButton";
+import SidebarBoardButton from "./SidebarBoardButton";
 
 const Sidebar = () => {
   const { data: currentUser } = useCurrentUser();
@@ -61,7 +61,7 @@ const Sidebar = () => {
               label="Logout"
             />
           )}
-          <SidebarTweetButton />
+          <SidebarBoardButton />
         </div>
       </div>
     </div>
